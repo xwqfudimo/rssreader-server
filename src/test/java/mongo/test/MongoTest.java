@@ -7,6 +7,7 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import server.rssreader.entity.Article;
+import server.rssreader.entity.FetchUrl;
 import server.rssreader.repository.ArticleRepository;
 
 @RunWith(SpringJUnit4ClassRunner.class)
@@ -50,4 +51,5 @@ public class MongoTest {
 		
 		articleRepository.delete(t);
 	}
+	
 }

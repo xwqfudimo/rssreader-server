@@ -31,4 +31,9 @@ public class FetchUrl {
 	public void setSourceName(String sourceName) {
 		this.sourceName = sourceName;
 	}
+	@Override
+	public String toString() {
+		return "FetchUrl [id=" + id + ", fetchUrl=" + fetchUrl
+				+ ", sourceName=" + sourceName + "]";
+	}
 }
