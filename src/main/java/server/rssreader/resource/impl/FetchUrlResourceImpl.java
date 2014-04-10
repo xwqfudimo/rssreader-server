@@ -52,6 +52,7 @@ public class FetchUrlResourceImpl implements FetchUrlResource {
 		this.fetchUrlRepository.delete(id);
 	}
 
+	@SuppressWarnings("unchecked")
 	@Override
 	public String getByPage(int pageIndex, int pageSize, String sourceName) {
 		Pagination pageInfo = Pagination.newInstance();

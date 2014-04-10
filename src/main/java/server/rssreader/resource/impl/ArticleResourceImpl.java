@@ -16,6 +16,7 @@ import org.springframework.stereotype.Service;
 import server.rssreader.dto.ArticleDto;
 import server.rssreader.entity.Article;
 import server.rssreader.repository.ArticleRepository;
+import server.rssreader.repository.UserRepository;
 import server.rssreader.resource.ArticleResource;
 import server.rssreader.util.JsonUtil;
 import server.rssreader.util.Pagination;
@@ -26,9 +27,14 @@ public class ArticleResourceImpl implements ArticleResource {
 	
 	@Autowired
 	private ArticleRepository articleRepository;
+	@Autowired
+	private UserRepository userRepository;
 
 	@Override
 	public Response addArticle(Article article, UriInfo uriInfo) {
+		
+//		this.userRepository.auth(username, password);
+		
 		this.articleRepository.save(article);
 		
 		URI createdUri = UriBuilder.fromUri(uriInfo.getRequestUri()).path("{id}").build(article.getId());
@@ -53,6 +59,7 @@ public class ArticleResourceImpl implements ArticleResource {
 		this.articleRepository.delete(id);
 	}
 
+	@SuppressWarnings("unchecked")
 	@Override
 	public String getByPage(int pageIndex, int pageSize, String title) {
 		Pagination pageInfo = Pagination.newInstance();

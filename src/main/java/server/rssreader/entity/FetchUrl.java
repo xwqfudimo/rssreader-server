@@ -1,6 +1,7 @@
 package server.rssreader.entity;
 
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 
@@ -11,6 +12,7 @@ public class FetchUrl {
 	@Field("fetch_url")
 	private String fetchUrl;
 	@Field("source_name")
+	@Indexed
 	private String sourceName;
 	
 	public String getId() {

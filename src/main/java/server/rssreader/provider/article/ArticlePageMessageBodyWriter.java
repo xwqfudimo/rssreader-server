@@ -15,6 +15,7 @@ import javax.ws.rs.ext.Provider;
 
 import server.rssreader.util.JsonUtil;
 
+@SuppressWarnings("rawtypes")
 @Produces(MediaType.APPLICATION_JSON)
 @Provider
 public class ArticlePageMessageBodyWriter implements

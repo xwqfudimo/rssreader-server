@@ -15,6 +15,7 @@ import server.rssreader.util.Pagination;
 public class ArticleRepositoryImpl extends BaseRepositoryImpl<Article>
 		implements ArticleRepository {
 
+	@SuppressWarnings({ "unchecked", "rawtypes" })
 	@Override
 	public List getByPage(Pagination pageInfo, Object... params) {
 		String title = String.valueOf(params[0]);

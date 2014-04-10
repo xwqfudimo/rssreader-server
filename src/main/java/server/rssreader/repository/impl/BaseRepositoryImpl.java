@@ -12,7 +12,6 @@ import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.data.mongodb.core.query.Update;
 import org.springframework.stereotype.Repository;
 
-import server.rssreader.entity.Article;
 import server.rssreader.repository.BaseRepository;
 import server.rssreader.util.Pagination;
 

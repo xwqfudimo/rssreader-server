@@ -6,6 +6,7 @@ import org.springframework.data.mongodb.core.query.Update;
 
 import server.rssreader.util.Pagination;
 
+@SuppressWarnings("rawtypes")
 public interface BaseRepository<T> {
 	void save(T t);
 

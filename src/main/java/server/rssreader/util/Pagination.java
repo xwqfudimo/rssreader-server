@@ -2,12 +2,11 @@ package server.rssreader.util;
 
 import java.util.List;
 
+@SuppressWarnings("rawtypes")
 public class Pagination {
 	private int pageSize = 30;
 	private int pageIndex;
 	private int totalRecords;
-	private int prevIndex;
-	private int nextIndex;
 	private List datas;
 	
 	public static Pagination newInstance() {
